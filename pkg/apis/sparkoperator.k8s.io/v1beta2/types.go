@@ -187,6 +187,9 @@ type SparkApplicationSpec struct {
 	// Mode is the deployment mode of the Spark application.
 	// +kubebuilder:validation:Enum={cluster,client}
 	Mode DeployMode `json:"mode,omitempty"`
+	// Pass the proxyUser
+	// +optional
+	ProxyUser string `json:"proxyUser,omitempty"`
 	// Image is the container image for the driver, executor, and init-container. Any custom container images for the
 	// driver, executor, or init-container takes precedence over this.
 	// +optional
